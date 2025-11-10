@@ -117,6 +117,7 @@ body a {
 /* Hero Section */
 .hero {
   background: url("../assets/Elearn.jpg") no-repeat center center/cover;
+  filter: brightness(0.6);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -225,15 +226,6 @@ body a {
   border-radius: 6px;
   font-weight: 500; 
   transition: background-color 0.15s;
-}
-
-.course-card a{
-  text-decoration: none;
-}
-
-.sign>a{
-  text-decoration: none;
-  color: #fff;
 }
 
 .sign:hover {
