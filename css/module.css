@@ -11,6 +11,11 @@ body {
   background: #333;
 }
 
+body a {
+  text-decoration: none;
+  color: inherit;
+}
+
 
 header {
   width: 100%;
@@ -180,15 +185,7 @@ section {
     color:#75b6e7;
 }
 
-/*footer*/
 /* Footer */
-.footer {
-  background: linear-gradient(to right, #333, #082338);
-  color: #f1f1f1;
-  padding: 40px 8%;
-  font-family: 'Poppins', sans-serif;
-}
-/* Footer main styling */
 .footer {
   background-color: #082338;
   color: #f1f1f1;
@@ -270,9 +267,4 @@ section {
   border-top: 1px solid #333;
   font-size: 13px;
   color: #aaa;
-}
-
-.contact a{
-  text-decoration: none;
-  color:  #00ffff;
 }
