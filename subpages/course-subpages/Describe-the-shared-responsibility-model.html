@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../../css/unit.css" rel="stylesheet" />
+    <title>Eterna</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <h1 class="logo"><em>Eterna</em></h1>
+        <ul class="nav-links">
+          <li><a href="../../Lms.html">Home</a></li>
+          <li><a href="../../browse.html">Courses</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="course">
+        <h1>Describe the shared responsibility model</h1>
+        <p id="module-unit-time">3 minutes</p>
+        <section>
+          <div class="content">
+            <p>You may have heard of the shared responsibility model, but you may not understand what it means or how it impacts cloud computing.</p>
+            <p>
+              With the shared responsibility model, these responsibilities get shared between the cloud provider and the consumer. Physical security, power, cooling, and network connectivity are the responsibility of the cloud provider. The consumer isn’t collocated with the datacenter, so it wouldn’t make sense for the consumer to have any of those responsibilities.<br />
+              <br />
+              At the same time, the consumer is responsible for the data and information stored in the cloud. (You wouldn’t want the cloud provider to be able to read your information.) The consumer is also responsible for access security, meaning you only give access to those who need it.<br>
+              <br />
+              Then, for some things, the responsibility depends on the situation. If you’re using a cloud SQL database, the cloud provider would be responsible for maintaining the actual database. However, you’re still responsible for the data that gets ingested into the database. If you deployed a virtual machine and installed an SQL database on it, you’d be responsible for database patches and updates, as well as maintaining the data and information stored in the database.<br>
+              <br>
+              With an on-premises datacenter, you’re responsible for everything. With cloud computing, those responsibilities shift. The shared responsibility model is heavily tied into the cloud service types (covered later in this learning path): infrastructure as a service (IaaS), platform as a service (PaaS), and software as a service (SaaS). IaaS places the most responsibility on the consumer, with the cloud provider being responsible for the basics of physical security, power, and connectivity. On the other end of the spectrum, SaaS places most of the responsibility with the cloud provider. PaaS, being a middle ground between IaaS and SaaS, rests somewhere in the middle and evenly distributes responsibility between the cloud provider and the consumer.<br>
+            </p>
+        <div class="video">
+            <p>The following diagram highlights how the Shared Responsibility Model informs who is responsible for what, depending on the cloud service type.</p>
+        </div>
+        <div class="content">
+            <p>When using a cloud provider, you'll always be responsible for:</p>
+            <ul>
+              <li>The information and data stored in the cloud</li>
+              <li>Devices that are allowed to connect to your cloud (cell phones, computers, and so on)</li>
+              <li>The accounts and identities of the people, services, and devices within your organization
+              </li>
+            </ul>
+            <p>The cloud provider is always responsible for:</p>
+              <ul>
+                <li>The physical datacenter</li>
+                <li>The physical network</li>
+                <li>the physical hosts</li>
+            </ul>
+            <p>Your service model will determine responsibility for things like:</p>
+            <ul>
+              <li>Operating systems</li>
+              <li>Network controls</li>
+              <li>Applications</li>
+              <li>Identity and infrastructure</li>
+            </ul>
+          </div>
+          <div class="unit">
+            <p>Next unit: Define cloud modules</p>
+            <!--<form action="Gen-ai.html" onclick="alert">
+                <button type="search">Next &gt;</button>
+            </form>
+            <button onclick="window.open('Gen-ai.html','_blank')='Genai.html'">Next &gt;</button>-->
+            <button class="previous" onclick="window.location.href='Introduction-to-cloud-computing.html'"> &lt; Previous</button>
+            <button class="next" onclick="window.location.href='Define-cloud-models.html'">Next &gt;</button>
+        </section>
+      </div>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="contact">
+            <h3>Contact Us</h3>
+            <a href="mailto:Eterna@freshworks.com">Mail</a> Or
+            <a href="tel:855747667">Call</a>
+        </div>
+      <p>&copy; Eterna. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

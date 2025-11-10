@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../../css/unit.css" rel="stylesheet" />
+    <link href=".././css/unit-table.css" rel="stylesheet" />
+    <title>Eterna</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <h1 class="logo"><em>Eterna</em></h1>
+        <ul class="nav-links">
+          <li><a href="../../Lms.html">Home</a></li>
+          <li><a href="../../browse.html">Courses</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!--main-->
+    <main>
+      <div class="course">
+        <h1>Understand how transformers language model works</h1>
+        <p id="module-unit-time">5 minutes</p>
+        <section>
+          <div class="content">
+            <p>
+              Today, importantly, developers don't need to train models from scratch. To build a generative AI application, you can use pretrained models. Some language models are open-source and publicly available. Others are offered in proprietary catalogs. Different models exist today which mostly differ by the specific data used to train them, or by how they implement attention within their architectures.
+            </p>
+            <h2>Large and small language models</h2>
+            <p>In general, language models can be considered in two categories: <em>Large Language Models (LLMs) and Small Language models (SLMs).</em></p>
+            <table>
+                <colgroup>
+                <th>
+                    Large Language Models (LLMs)
+                </th>
+                <th>Small Language Models (SLMs)</th>
+                <tr>
+                    <td>LLMs are trained with vast quantities of text that represent a wide range of general subject matter – typically by sourcing data from the Internet and other generally available publications.</td>
+                    <td>SLMs are trained with smaller, more subject-focused datasets</td>
+                </tr>
+                <tr>
+                    <td>When trained, LLMs have many billions (even trillions) of parameters (weights that can be applied to vector embeddings to calculate predicted token sequences).</td>
+                    <td>Typically have fewer parameters than LLMs.</td>
+                </tr>
+                <tr>
+                    <td>Able to exhibit comprehensive language generation capabilities in a wide range of conversational contexts.</td>
+                    <td>This focused vocabulary makes them effective in specific conversational topics, but less effective at more general language generation.</td>
+                </tr>
+                <tr>
+                    <td>Their large size can impact their performance and make them difficult to deploy locally on devices and computers.</td>
+                    <td>The smaller size of SLMs can provide more options for deployment, including local deployment to devices and on-premises computers; and makes them faster and easier to fine-tune.</td>
+                </tr>
+                <tr>
+                    <td>Fine-tuning the model with more data to customize its subject expertise can be time-consuming, and expensive in terms of the compute power required to perform the extra training.</td>
+                    <td>Fine-tuning can potentially be less time-consuming and expensive.</td>
+                </tr>
+                </colgroup>
+            </table>
+          </div>
+          <div class="unit">
+            <p>Next unit: Improve prompt results</p>
+            <button class="previous" onclick="window.location.href='Understand-how-transformers-advance-language-models'"> &lt; Previous</button>
+            <button class="next" onclick="window.location.href='Improve-prompt-results.html'">Next &gt;</button>
+        </section>
+      </div>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="contact">
+            <h3>Contact Us</h3>
+            <a href="mailto:Eterna@freshworks.com">Mail</a> Or
+            <a href="tel:855747667">Call</a>
+        </div>
+      <p>&copy; Eterna. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../../css/unit.css" rel="stylesheet" />
+    <title>Eterna</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <h1 class="logo"><em>Eterna</em></h1>
+        <ul class="nav-links">
+          <li><a href="../../Lms.html">Home</a></li>
+          <li><a href="../../browse.html">Courses</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!--main-->
+    <main>
+      <div class="course">
+        <h1>How do language models work?</h1>
+        <p id="module-unit-time">8 minutes</p>
+        <section>
+          <div class="content">
+            <p>Over the last decades, multiple developments in the field of natural language processing (NLP) have resulted in achieving large language models (LLMs). The development and availability of language models led to new ways to interact with applications and systems, such as through generative AI assistants and agents.</p>
+            <p>Let's take a look back at historical developments for language models which include:</p>
+            <ul>
+              <li><strong>Tokenization</strong>: enabling machines to read.</li>
+              <li><strong>Word embeddings</strong>: enabling machines to capture the relationship between words.</li>
+              <li><strong>Architectural developments</strong>: (changes in the design of language models) enabling them to capture word context.</li>
+            </ul>
+            <h2>Tokenization</h2>
+            <p>As you may expect, machines have a hard time deciphering text as they mostly rely on numbers. To read text, we therefore need to convert the presented text to numbers.</p>
+            <p>One important development to allow machines to more easily work with text has been tokenization. Tokens are strings with a known meaning, usually representing a word. Tokenization is turning words into tokens, which are then converted to numbers. A statistical approach to tokenization is by using a pipeline:</p>
+            <div class="photo">
+              <img src="https://learn.microsoft.com/en-us/training/wwl-data-ai/fundamentals-generative-ai/media/tokenization-pipeline.png" height="auto" width="100%">
+            </div>
+            <ol>
+              <li>Start with the text you want to tokenize.</li>
+              <li>Split the words in the text based on a rule. For example, split the words where there's a white space.</li>
+              <li>Stop word removal. Remove noisy words that have little meaning like the and a. A dictionary of these words is provided to structurally remove them from the text.</li>
+              <li>Assign a number to each unique token.</li>
+            </ol>
+            <p>Tokenization allowed for text to be labeled. As a result, statistical techniques could be used to let computers find patterns in the data instead of applying rule-based models.</p>
+            <h2>Word embeddings</h2>
+            <p>One of the key concepts introduced by applying deep learning techniques to NLP is word embeddings. Word embeddings address the problem of not being able to define the semantic relationship between words.</p>
+            <p>Word embeddings are created during the deep learning model training process. During training, the model analyzes the cooccurrence patterns of words in sentences and learns to represent them as vectors. A vector represents a path through a point in n-dimensional space (in other words, a line). Semantic relationships are defined by how similar the angles of the lines are (i.e. the direction of the path). Because word embeddings represent words in a vector space, the relationship between words can be easily described and calculated.</p>
+            <p>To create a vocabulary that encapsulates semantic relationships between the tokens, we define contextual vectors, known as embeddings, for them. Vectors are multi-valued numeric representations of information, for example [10, 3, 1] in which each numeric element represents a particular attribute of the information. For language tokens, each element of a token's vector represents some semantic attribute of the token. The specific categories for the elements of the vectors in a language model are determined during training based on how commonly words are used together or in similar contexts.</p>
+            <p>Vectors represent lines in multidimensional space, describing direction and distance along multiple axes (you can impress your mathematician friends by calling these amplitude and magnitude). Overall, the vector describes the direction and distance of the path from origin to end.</p>
+            <div class="photo">
+              <img src="https://learn.microsoft.com/en-us/training/wwl-data-ai/fundamentals-generative-ai/media/word-embeddings.png" height="auto" width="100%">
+            </div>
+            <p>The elements of the tokens in the embeddings space each represent some semantic attribute of the token, so that semantically similar tokens should result in vectors that have a similar orientation – in other words they point in the same direction. A technique called cosine similarity is used to determine if two vectors have similar directions (regardless of distance), and therefore represent semantically linked words. For example, the embedding vectors for "dog" and "puppy" describe a path along an almost identical direction, which is also fairly similar to the direction for "cat". The embedding vector for "skateboard" however describes journey in a very different direction.</p>
+            <h2>Architectural developments</h2>
+            <p>The architecture, or design, of a machine learning model describes the structure and organization of its various components and processes. It defines how data is processed, how models are trained and evaluated, and how predictions are generated. One of the first breakthroughs in language model architecture was the <strong>Recurrent Neural Networks (RNNs)</strong>.</p>
+            <p>To understand text isn't just to understand individual words, presented in isolation. Words can differ in their meaning depending on the context they're presented in. In other words, the sentence around a word matters to the meaning of the word.</p>
+            <p>RNNs are able to take into account the context of words through multiple sequential steps. Each step takes an input and a hidden state. Imagine the input at each step to be a new word. Each step also produces an output. The hidden state can serve as a memory of the network, storing the output of the previous step and passing it as input to the next step.</p>
+            <h6>Imagine a sentence like:</h6>
+            <p>Vincent Van Gogh was a painter most known for creating stunning and emotionally expressive artworks, including ...</p>
+            <p>To know what word comes next, you need to remember the name of the painter. The sentence needs to be completed, as the last word is still missing. A missing or masked word in NLP tasks is often represented with [MASK]. By using the special [MASK] token in a sentence, you can let a language model know it needs to predict what the missing token or value is.</p>
+            <p>Simplifying the example sentence, you can provide the following input to an RNN: Vincent was a painter known for [MASK]:</p>
+            <div class="photo">
+              <img src="https://learn.microsoft.com/en-us/training/wwl-data-ai/fundamentals-generative-ai/media/vincent-tokenized.png" height="auto" width="100%">
+            </div>
+            <p>The RNN takes each token as an input, processes it, and updates the hidden state with a memory of that token. When the next token is processed as new input, the hidden state from the previous step is updated.</p>
+            <p>Finally, the last token is presented as input to the model, namely the [MASK] token. Indicating that there's information missing and the model needs to predict its value. The RNN then uses the hidden state to predict that the output should be something like Starry Night</p>
+            <div class="photo">
+              <img src="https://learn.microsoft.com/en-us/training/wwl-data-ai/fundamentals-generative-ai/media/recurrent-network.gif" height="auto" width="100%">
+            </div>
+            <h4>Challenges with RNNs</h4>
+            <p>In the example, the hidden state contains the information Vincent, is, painter, and know. With RNNs, each of these tokens are equally important in the hidden state, and therefore equally considered when predicting the output.</p>
+            <p>RNNs allow for context to be included when deciphering the meaning of a word in relation to the complete sentence. However, as the hidden state of an RNN is updated with each token, the actual relevant information, or signal, may be lost.</p>
+            <p>In the example provided, Vincent Van Gogh's name is at the start of the sentence, while the mask is at the end. At the final step, when the mask is presented as input, the hidden state may contain a large amount of information that is irrelevant for predicting the mask's output. Since the hidden state has a limited size, the relevant information may even be deleted to make room for new and more recent information.</p>
+            <p>When we read this sentence, we know that only certain words are essential to predict the last word. An RNN however, includes all (relevant and irrelevant) information in a hidden state. As a result, the relevant information may become a weak signal in the hidden state, meaning that it can be overlooked because there's too much other irrelevant information influencing the model.</p>
+            <p>So far, we described how language models can read text through <em>tokenization</em> and how they can understand the relationship between words through <em>word embeddings</em>. We also explored how past language models tried to capture the context of words. Next, learn how the limitations of previous models are handled in today's language models with transformer architecture.</p>
+          </div>
+          <div class="unit">
+            <p>Next unit: Understand how transformers advance language models</p>
+            <button class="previous" onclick="window.location.href='What-is-generative-AI.html'"> &lt; Previous</button>
+            <button class="next" onclick="window.location.href='Understand-how-transformers-advance-language-models.html'">Next &gt;</button>
+        </section>
+        </div>
+      </div>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="contact">
+            <h3>Contact Us</h3>
+            <a href="mailto:Eterna@freshworks.com">Mail</a> Or
+            <a href="tel:855747667">Call</a>
+        </div>
+      <p>&copy; Eterna. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
