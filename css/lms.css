@@ -23,7 +23,7 @@ body a {
   justify-content: space-between;
   align-items: center;
   padding: 20px 10%;
-  background-color: #fff;
+  background-color: #1f1f1f;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
@@ -76,7 +76,7 @@ body a {
 }
 
 #search-form button:hover {
-  background-color: #1c5edb;
+  background-color: #75b6e7;
 }
 
 /* ---------- NAV LINKS ---------- */
@@ -89,7 +89,7 @@ body a {
 
 .nav-links a {
   text-decoration: none;
-  color: #333;
+  color: #ffffff;
   font-weight: 500;
   transition: all 0.3s ease;
   position: relative;
