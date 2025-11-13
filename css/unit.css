@@ -111,7 +111,7 @@ section {
   display: flex;
   flex-direction: column;
   width: 60%;
-  background-color: #082338;
+  background-color: hwb(0 3% 97%);
   color: #fff;
 }
 
