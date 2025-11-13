@@ -47,17 +47,17 @@ body a {
   border-radius: 30px;
   overflow: hidden;
   transition: border-color 0.3s ease;
-  width: 450px; /* 🔹 Increased length */
+  width: 450px; 
   max-width: 100%;
 }
 
 #search-form:focus-within {
-  border-color: #2a7cf6; /* Highlight when typing */
+  border-color: #2a7cf6; 
 }
 
 #search-form input {
   flex: 1;
-  padding: 12px 18px; /* Slightly larger input area */
+  padding: 12px 18px; 
   border: none;
   outline: none;
   font-size: 16px;
@@ -156,7 +156,7 @@ body a {
 
 .btn {
   padding: 12px 25px;
-  background-color:#1c5edb;
+  background-color:#3b74dd;
   color: white;
   text-decoration: none;
   border-radius: 6px;
