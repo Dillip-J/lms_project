@@ -136,7 +136,7 @@ main {
   display: flex;
   flex-direction: column;
   width: 65%;
-  background-color: hsl(0, 0%, 0%);
+  background-color: black;
   color: #fff;
 }
 
@@ -170,11 +170,11 @@ section {
   transition: 0.3s;
 }
 
-.page-container {
-  display: ;
-  flex-direction: ;
-  justify-content: ;
-  width: ;
+.page-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
 }
 
 .page-container>div{
