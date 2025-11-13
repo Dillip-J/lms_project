@@ -136,7 +136,7 @@ main {
   display: flex;
   flex-direction: column;
   width: 65%;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.562);
   color: #fff;
 }
 
